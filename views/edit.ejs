@@ -1,0 +1,60 @@
+
+
+<% include ./partials/header%>
+
+
+<div class="container z-depth-2" style="margin: 30px auto; width: 50%">
+
+<center><h4>Edit:  <%=blog.title%> </h4></center>
+
+<br/>
+
+
+<div class="row">
+<form class="col s12" action="/blogs/<%=blog._id%>?_method=PUT" method="POST" >
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">assignment</i>
+      <input id="icon_prefix" type="text" class="validate"  name="blog[title]" required value="<%=blog.title%>">
+      <label for="icon_prefix">Blog Title</label>
+    </div>
+   
+
+    <div class="input-field col s12">
+      <i class="material-icons prefix"> camera_alt</i>
+      <input id="icon_telephone" type="tel" class="validate"  name="blog[image]" required value="<%=blog.image%>">
+      <label for="icon_telephone">Image Url</label>
+    </div>
+
+
+
+     <div class="input-field col s12">
+     <i class="material-icons prefix">add_box</i>
+          <textarea id="textarea1" class="materialize-textarea" name="blog[body]"  > <%=blog.body%></textarea>
+          <label for="textarea1">Blog post</label>
+        </div>
+
+<center>
+     <div class="input-field col s12">
+     <button class="btn waves-effect waves-light" type="submit" name="action" >Update Article
+    <i class="material-icons right">send</i>
+  </button>
+      </div>
+
+      
+ 
+      </center>
+
+ 
+        
+
+  </div>
+</form>
+</div>
+
+
+
+
+</div>
+
+<% include ./partials/footer%>

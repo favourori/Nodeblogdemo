@@ -1,0 +1,42 @@
+<% include ./partials/header%>
+
+
+
+
+<div class="container"><h4>Recent Blog Posts </h4>
+
+<hr/>
+
+<br/></div>
+
+<% exportBlog.forEach(function(blog){%>
+<div class="container">
+<div class="col s12 m6">
+
+<div class="card horizontal hoverable">
+  <div class="card-image ">
+  <img src=" <%=blog.image %>" class="blogImage" style="max-width: 380px">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+    <h5><%=blog.title %></h5>
+    <p><%=blog.body.substring(0, 100) %></p>
+    </div>
+    <div class="card-action">
+      
+      <p>Created : <%=blog.created.toDateString()%></p> 
+      <a href="/blogs/<%=blog._id%>">Read More</a>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<%});%>
+
+
+
+
+
+<% include ./partials/footer%>

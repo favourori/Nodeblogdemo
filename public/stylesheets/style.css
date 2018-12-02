@@ -1,0 +1,25 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+    background-color: #f5f6fa;
+    
+}
+
+.container{
+    margin: 30px auto;
+    width:70%;
+
+    padding: 20px 10px;
+}
+
+.blogImage{
+    width: 300px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .blogImage{
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,52 @@
+<% include ./partials/header%>
+
+
+<div class="container z-depth-2" style="margin: 30px auto; width: 50%">
+
+
+
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card">
+        <div class="card-image">
+          <img src="<%=blog.image %>">
+          <span class="card-title"> <%=blog.title%></span>
+        </div>
+        <div class="card-content">
+        <b><p>Created : <%=blog.created.toDateString() %> </p></b>
+        <p><%-blog.body %></p>
+
+
+        <div>
+        <br/>
+        <div style="margin-bottom: 10px">
+        <a class="waves-effect waves-light btn" href="/blogs/<%=blog._id%>/edit"><i class="material-icons left">create</i>Edit Post</a>
+        </div>
+
+        <form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+        
+        
+        <button class="btn waves-effect waves-light red" type="submit" name="action">Delete Post
+        <i class="material-icons left ">delete</i>
+      </button>
+
+        </form>
+        </div>
+
+        <br/>
+        
+      </div>
+        </div>
+
+        
+    </div>
+  </div>
+         
+
+
+
+
+
+</div>
+
+<% include ./partials/footer%>
